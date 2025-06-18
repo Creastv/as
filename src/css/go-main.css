@@ -563,7 +563,13 @@ body.home .bc-title__title {
 }
 
 .entry-header {
+  overflow: hidden;
   padding: 100px 0 50px;
+}
+@media only screen and (max-width: 460px) {
+  .entry-header {
+    padding: 30px 0;
+  }
 }
 .entry-header .entry-header__wrap {
   text-align: center;
@@ -586,7 +592,8 @@ body.home .bc-title__title {
 }
 @media only screen and (max-width: 768px) {
   .entry-header .entry-header__wrap .entry-label {
-    font-size: 25vw;
+    font-size: 58px;
+    white-space: initial;
   }
 }
 .entry-header .entry-desc {
