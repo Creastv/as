@@ -1,0 +1,141 @@
+@import "../../src/css/scss/variable";
+
+#footer {
+  margin-top: 0px;
+}
+.b-contact {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+  //   padding: 0 20px;
+  .b-contact__wrap {
+    display: flex;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .left {
+      width: calc(50% + 75px);
+      @media #{$sm} {
+        width: 100%;
+        order: 2;
+      }
+    }
+    .right {
+      width: 50%;
+      margin-left: -75px;
+      padding-top: 50px;
+      @media #{$sm} {
+        width: 100%;
+        margin-left: 0;
+        order: 1;
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+          font-size: 31px;
+          color: var(--black);
+          margin: 0;
+          padding: 0;
+        }
+        .logo {
+          background-color: var(--black);
+          width: 75px;
+          height: 75px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 100%;
+            height: auto;
+            padding: 8px;
+          }
+        }
+      }
+      .right_wrap {
+        background-color: #fff;
+        width: 100%;
+        min-height: 300px;
+        padding: 100px 50px;
+        @media #{$xs} {
+          padding: 50px 20px;
+        }
+      }
+    }
+  }
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    @media #{$sm} {
+      max-width: 100%;
+    }
+  }
+  .form-wrap p {
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+  .form-wrap h3 {
+    font-size: 16px !important;
+    text-transform: uppercase;
+  }
+  .form-wrap .group-form {
+    display: flex;
+    gap: 10px;
+  }
+  .form-wrap .group-form .col-1 {
+    width: calc(100% - 0px);
+  }
+  .form-wrap .group-form .col-2 {
+    width: calc(50% - 5px);
+  }
+  .form-wrap .group-form input,
+  .group-form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  input,
+  textarea {
+    margin: 0px !important;
+    border: none;
+    border-bottom: 1px solid var(--main);
+    // border: none;
+  }
+
+  .zgoda span {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .zgoda p {
+    line-height: 1 !important;
+  }
+  .zgoda label {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .zgoda input {
+    width: initial !important;
+    margin: 0px !important;
+  }
+  .form-wrap .wpcf7-submit {
+    background-color: var(--main) !important;
+    border-radius: 100px;
+    width: 100%;
+  }
+  .form-wrap .wpcf7-spinner {
+    position: absolute;
+    z-index: 33;
+    top: 2px;
+  }
+}
+
+.info-partners {
+  padding-top: 0;
+}

@@ -1,0 +1,23 @@
+@import "../../src/css/scss/variable";
+.b-full-image {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+  margin-bottom: 50px;
+
+  img {
+    display: block;
+    max-height: 500px;
+    height: 50vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .b-full-image-ornament {
+    display: block;
+    right: 0;
+    width: 100%;
+    height: auto;
+  }
+}

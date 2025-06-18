@@ -1,0 +1,43 @@
+@import "../../src/css/scss/variable";
+.bl-kv {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+  #bl-kv__ornament {
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    width: calc(100% - 50px);
+    height: auto;
+  }
+  .bl-kv__wraper {
+    display: flex;
+    align-items: center;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .col {
+      width: 50%;
+      @media #{$sm} {
+        width: 100%;
+        text-align: center;
+        .bc-button {
+          justify-content: center;
+        }
+      }
+      &:nth-child(1) {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      .bc-button {
+        a {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}

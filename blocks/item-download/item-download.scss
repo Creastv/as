@@ -1,0 +1,29 @@
+@import "../../src/css/scss/variable";
+
+.downloads {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  .downloads__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--black);
+    @media #{$sm} {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+    .downloads__item__title {
+      flex: auto;
+      p {
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+    .downloads__item__btn {
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.navbar__partners {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  // background-color: var(--white);
+  padding: 20px 20px 20px 80px;
+  transition: all 0.3s ease;
+  width: 40%;
+  @media #{$slg} {
+    background-color: #fff;
+    order: 1;
+    width: 100% !important;
+  }
+  .navbar__partner {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 12;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .navbar__partners__ornament {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    // top: 0px;
+    // bottom: -15px;
+    bottom: 0;
+    transition: all 0.3s ease-in !important;
+    @media #{$slg} {
+      display: none;
+    }
+  }
+}

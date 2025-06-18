@@ -1,0 +1,199 @@
+.navbar__nav {
+  align-self: center;
+  transition: left 0.3s ease-in !important;
+  @media #{$slg} {
+    position: fixed;
+    z-index: 999999;
+    left: -150%;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    background: #354c9e;
+    background: linear-gradient(
+      266deg,
+      rgba(53, 76, 158, 1) 0%,
+      rgba(30, 36, 85, 1) 100%
+    );
+  }
+
+  @media #{$md} {
+    width: 100%;
+  }
+}
+.navbar__nav.active {
+  @media #{$slg} {
+    left: 0;
+  }
+}
+.navbar__navigation__list {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    @media #{$xlg} {
+      gap: 10px;
+    }
+    @media #{$slg} {
+      gap: 10px;
+      flex-direction: column;
+      padding: 50px 15px;
+    }
+    li {
+      margin: 0;
+      a {
+        span {
+          display: block;
+          color: var(--white);
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 100%;
+          text-transform: uppercase;
+          @media #{$xlg} {
+            font-size: 14px;
+          }
+          @media #{$slg} {
+            font-size: 21px;
+          }
+        }
+        &:hover {
+          span {
+            color: var(--main1);
+          }
+        }
+      }
+    }
+    .current_page_item {
+      > a {
+        span {
+          font-weight: 500;
+          color: var(--main1) !important;
+          text-decoration: underline;
+        }
+      }
+    }
+    .btn-nav {
+      a {
+        span {
+          border: 1px solid var(--main1);
+          padding: 1px 10px;
+          border-radius: 6px;
+          text-decoration: none;
+          &:hover {
+            background-color: var(--main1);
+
+            color: var(--white) !important;
+          }
+        }
+      }
+    }
+    li.menu-item-has-children {
+      // position: relative;
+
+      > a {
+        span {
+          position: relative;
+          padding-right: 18px;
+          @media #{$slg} {
+            padding-right: 0;
+          }
+          &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 12px;
+            height: 15px;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: rotate(90deg);
+            @media #{$slg} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  li:hover {
+    .sub-menu {
+      visibility: visible;
+      transform: translate(0, 5px);
+      transition: all 0.3s ease;
+
+      li {
+        opacity: 1;
+      }
+    }
+  }
+
+  .sub-menu {
+    visibility: hidden;
+    position: absolute;
+    background: #fff;
+    // min-width: 250px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 11px;
+    overflow: hidden;
+    transition: all 0.1s ease;
+    transform: translate(0, 10px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.01);
+    @media #{$slg} {
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      background: none;
+      visibility: visible;
+      transform: translate(0, 0px) !important;
+    }
+    li {
+      opacity: 0;
+      transition: all 0.1s ease;
+      @media #{$slg} {
+        opacity: 1;
+      }
+      a {
+        font-size: 14px;
+        span {
+          text-transform: none;
+          color: var(--main2);
+          @media #{$slg} {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+.navbar__nav {
+  transition: top 1s;
+  @media #{$sm} {
+    padding: 0;
+    // display: none;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main1);
+  z-index: 9999;
+  cursor: pointer;
+  transition: left 0.3s ease-in !important;
+  font-size: 53px;
+  color: #fff;
+  line-height: 26px;
+  text-align: center;
+}

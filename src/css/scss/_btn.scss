@@ -1,0 +1,85 @@
+.btn-main {
+  padding: 10px 20px;
+  background-color: var(--main);
+  border: 2px solid var(--main) !important;
+  color: var(--white) !important;
+  font-weight: 400;
+  border: none;
+  border-radius: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s linear;
+  span {
+    color: var(--white) !important;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  svg {
+    display: flex;
+    vertical-align: middle;
+    path {
+      fill: var(--white);
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active,
+  &:focus,
+  &:visited {
+    opacity: 1;
+  }
+}
+.btn-main-two {
+  padding: 10px 20px;
+  background-color: var(--main1);
+  border: 2px solid var(--main1) !important;
+  color: var(--main2) !important;
+  font-weight: 400;
+  border: none;
+  border-radius: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s linear;
+  span {
+    color: var(--white) !important;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  svg {
+    display: flex;
+    vertical-align: middle;
+    path {
+      fill: var(--white);
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active,
+  &:focus,
+  &:visited {
+    opacity: 1;
+  }
+}
+.btn-rev {
+  padding: 10px 20px;
+  border: 2px solid var(--main) !important;
+  color: var(--main);
+  border: none;
+  border-radius: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  &:hover {
+    background-color: var(--main);
+    color: var(--white);
+    opacity: 0.8;
+  }
+}

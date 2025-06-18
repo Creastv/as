@@ -1,0 +1,60 @@
+@import "../../src/css/scss/variable";
+
+.bullets-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  @media #{$md} {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 0;
+    padding: 30px 0;
+  }
+  @media #{$sm} {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+    padding: 30px 0;
+  }
+  .bullet-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    gap: 0px;
+    padding: 10%;
+    text-align: center;
+    border-right: 1px solid var(--main);
+    @media #{$sm} {
+      border: none;
+      border-bottom: 1px solid var(--main);
+    }
+    &:last-child {
+      border: none;
+    }
+    @media #{$sm} {
+      padding: 5px;
+      gap: 0px;
+    }
+    .bullet-title {
+      color: var(--main1);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    p {
+      // font-size: 14px;
+      // line-height: normal;
+
+      margin: 0;
+      padding: 0;
+      @media #{$sm} {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+.bullets-home {
+  background-color: #f9f9f9;
+  @media #{$sm} {
+    padding: 30px 0;
+  }
+}

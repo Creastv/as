@@ -1,0 +1,160 @@
+:root {
+  --main: #f7931d;
+  --main1: #36a9e1;
+  --main2: #221b48;
+  --main3: #185ab1;
+  --black: #000000;
+  --light-black: #5e5e5e;
+  --body: #f5f5f5;
+  --gray: #e4e8f0;
+  --light: #fafafc;
+  --white: #fff;
+}
+
+#footer {
+  margin-top: 0px;
+}
+
+.b-contact {
+  position: relative;
+  width: 100vw;
+  left: -50vw;
+  margin-left: 50%;
+}
+.b-contact .b-contact__wrap {
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  .b-contact .b-contact__wrap {
+    flex-wrap: wrap;
+  }
+}
+.b-contact .b-contact__wrap .left {
+  width: calc(50% + 75px);
+}
+@media only screen and (max-width: 768px) {
+  .b-contact .b-contact__wrap .left {
+    width: 100%;
+    order: 2;
+  }
+}
+.b-contact .b-contact__wrap .right {
+  width: 50%;
+  margin-left: -75px;
+  padding-top: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .b-contact .b-contact__wrap .right {
+    width: 100%;
+    margin-left: 0;
+    order: 1;
+  }
+}
+.b-contact .b-contact__wrap .right .top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.b-contact .b-contact__wrap .right .top p {
+  font-size: 31px;
+  color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+.b-contact .b-contact__wrap .right .top .logo {
+  background-color: var(--black);
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b-contact .b-contact__wrap .right .top .logo img {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+}
+.b-contact .b-contact__wrap .right .right_wrap {
+  background-color: #fff;
+  width: 100%;
+  min-height: 300px;
+  padding: 100px 50px;
+}
+@media only screen and (max-width: 460px) {
+  .b-contact .b-contact__wrap .right .right_wrap {
+    padding: 50px 20px;
+  }
+}
+.b-contact .form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+@media only screen and (max-width: 768px) {
+  .b-contact .form-wrap {
+    max-width: 100%;
+  }
+}
+.b-contact .form-wrap p {
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+.b-contact .form-wrap h3 {
+  font-size: 16px !important;
+  text-transform: uppercase;
+}
+.b-contact .form-wrap .group-form {
+  display: flex;
+  gap: 10px;
+}
+.b-contact .form-wrap .group-form .col-1 {
+  width: calc(100% - 0px);
+}
+.b-contact .form-wrap .group-form .col-2 {
+  width: calc(50% - 5px);
+}
+.b-contact .form-wrap .group-form input,
+.b-contact .group-form select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+.b-contact input,
+.b-contact textarea {
+  margin: 0px !important;
+  border: none;
+  border-bottom: 1px solid var(--main);
+}
+.b-contact .zgoda span {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.b-contact .zgoda p {
+  line-height: 1 !important;
+}
+.b-contact .zgoda label {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.b-contact .zgoda input {
+  width: initial !important;
+  margin: 0px !important;
+}
+.b-contact .form-wrap .wpcf7-submit {
+  background-color: var(--main) !important;
+  border-radius: 100px;
+  width: 100%;
+}
+.b-contact .form-wrap .wpcf7-spinner {
+  position: absolute;
+  z-index: 33;
+  top: 2px;
+}
+
+.info-partners {
+  padding-top: 0;
+}/*# sourceMappingURL=contact.css.map */

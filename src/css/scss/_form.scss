@@ -1,0 +1,112 @@
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  // max-width: 500px;
+  // margin: 0 auto;
+  @media #{$sm} {
+    max-width: 100%;
+  }
+}
+.form-wrap p {
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+.form-wrap h3 {
+  font-size: 16px !important;
+  text-transform: uppercase;
+}
+.form-wrap .group-form {
+  display: flex;
+  gap: 10px;
+}
+.form-wrap .group-form .col-1 {
+  width: calc(100% - 0px);
+  margin-bottom: 10px;
+}
+.form-wrap .group-form .col-2 {
+  width: calc(50% - 5px);
+  margin-bottom: 10px;
+}
+.form-wrap .group-form input,
+.group-form select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.row-form label {
+  display: block;
+  margin: 10px 0;
+}
+select,
+input,
+textarea {
+  margin: 0px !important;
+  border: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--main);
+  // border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  &:focus-visible {
+    border: 1px solid var(--main) !important;
+  }
+}
+.wpcf7-form-control-wrap {
+  width: 100%;
+  display: block;
+}
+
+.zgoda span {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.zgoda p {
+  line-height: 1 !important;
+}
+.zgoda label {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.zgoda input {
+  width: initial !important;
+  margin: 0px !important;
+}
+.form-wrap .wpcf7-submit {
+  background-color: var(--main) !important;
+  border-radius: 100px;
+  width: 100%;
+}
+.form-wrap .wpcf7-spinner {
+  position: absolute;
+  z-index: 33;
+  top: 2px;
+}
+
+.wpcf7-not-valid-tip {
+  color: #dc3232;
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+}
+
+.wpcf7-submit {
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 10px;
+  background-color: var(--main);
+  border-radius: 10px;
+  @media #{$sm} {
+    max-width: 100%;
+  }
+}
