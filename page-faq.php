@@ -1,5 +1,5 @@
 <?php
-/* Template Name: FAQ
+/* Template Name: FAQ/navigacja-sticky-sidebar
  * Template Post Type: page
  * 
  * */
@@ -15,12 +15,12 @@ $nav = get_field('nawigacja');
                     <?php the_content(); ?>
                 </div>
                 <?php if ($nav) { ?>
-                <div class="col-1">
-                    <div class="sticky-nav">
-                        <h3>Spis treści</h3>
-                        <?php echo $nav; ?>
+                    <div class="col-1">
+                        <div class="sticky-nav">
+                            <h3>Spis treści</h3>
+                            <?php echo $nav; ?>
+                        </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
         </div>
