@@ -641,6 +641,10 @@ body.archive .entry-header h1 {
   color: var(--black) !important;
 }
 
+.wp-singular .entry-header {
+  overflow: initial;
+}
+
 .navbar__nav {
   align-self: center;
   transition: left 0.3s ease-in !important;
