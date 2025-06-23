@@ -23,7 +23,7 @@ if (!empty($block['className'])) {
                         <?php echo wp_get_attachment_image($banner['baner'], 'full'); ?>
                     </div>
                     <div class="banners__content">
-                        <?php echo wp_get_attachment_image($banner['logo'], 'medium', false, array('class' => 'logo')); ?>
+                        <?php echo wp_get_attachment_image($banner['logo'], 'thumbnail', false, array('class' => 'logo')); ?>
                         <?php
                         $link = $banner['link'];
                         if ($link) :

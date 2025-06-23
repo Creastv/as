@@ -1375,13 +1375,6 @@ body.archive .entry-header h1 {
   display: block !important;
 }
 
-.home .info-partners__logos path {
-  fill: var(--white);
-}
-.home .info-partners__logos .red {
-  fill: red;
-}
-
 .info-partners {
   padding: 50px 0 0;
 }

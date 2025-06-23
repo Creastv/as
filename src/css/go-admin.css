@@ -865,13 +865,6 @@ body {
   display: block !important;
 }
 
-.home .info-partners__logos path {
-  fill: var(--white);
-}
-.home .info-partners__logos .red {
-  fill: red;
-}
-
 .btn-main {
   padding: 10px 20px;
   background-color: var(--main);
