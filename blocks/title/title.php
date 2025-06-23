@@ -12,12 +12,13 @@ if (!empty($block['className'])) {
 if (!empty($block['align'])) {
     $class_name .= ' align' . $block['align'];
 }
-if (!empty($block['id'])) {
-    $class_name .= ' id-' . $block['id'];
+$anchor = '';
+if (!empty($block['anchor'])) {
+    $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
 }
 ?>
 
-<div class="<?php echo esc_attr($class_name); ?>" id="<?php echo esc_attr($block['id']); ?>">
+<div class="<?php echo esc_attr($class_name); ?>" <?php echo esc_attr($anchor); ?>>
     <div class="bc-title__wrap">
         <<?php echo $tag; ?> class="bc-title__title">
             <?php echo $title; ?><span class="bc-title-border"><span> <?php echo $titleBorder; ?></span></span>
