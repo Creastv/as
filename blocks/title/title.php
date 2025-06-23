@@ -12,9 +12,12 @@ if (!empty($block['className'])) {
 if (!empty($block['align'])) {
     $class_name .= ' align' . $block['align'];
 }
+if (!empty($block['id'])) {
+    $class_name .= ' id-' . $block['id'];
+}
 ?>
 
-<div class="<?php echo esc_attr($class_name); ?>">
+<div class="<?php echo esc_attr($class_name); ?>" id="<?php echo esc_attr($block['id']); ?>">
     <div class="bc-title__wrap">
         <<?php echo $tag; ?> class="bc-title__title">
             <?php echo $title; ?><span class="bc-title-border"><span> <?php echo $titleBorder; ?></span></span>

@@ -318,7 +318,10 @@ function register_acf_block_types()
     ),
     'mode'            => 'preview',
     'keywords'          => array('Title'),
-    'supports' => array('align' => true),
+    'supports' => array(
+      'align' => true,
+      'id' => true,
+    ),
     'enqueue_assets'    => function () {
       wp_enqueue_style('go-title',  get_template_directory_uri() . '/blocks/title/title.min.css');
     },
