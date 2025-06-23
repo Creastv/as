@@ -1871,4 +1871,94 @@ textarea:focus-visible {
 .news-item p {
   margin-bottom: 5px;
   font-size: 14px;
+}
+
+.b-sticky-con {
+  position: relative;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+}
+.b-sticky-con .b-sticky-con__wraper {
+  display: flex;
+  align-items: stretch;
+  gap: 100px;
+}
+@media only screen and (max-width: 1300px) {
+  .b-sticky-con .b-sticky-con__wraper {
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .b-sticky-con .b-sticky-con__wraper {
+    flex-wrap: wrap;
+  }
+}
+.b-sticky-con .b-sticky-con__wraper .col-1:nth-child(2) {
+  width: 25%;
+  order: 1;
+}
+@media only screen and (max-width: 998px) {
+  .b-sticky-con .b-sticky-con__wraper .col-1:nth-child(2) {
+    width: 100%;
+  }
+}
+.b-sticky-con .b-sticky-con__wraper .col-1:nth-child(1) {
+  width: 75%;
+  order: 2;
+}
+@media only screen and (max-width: 998px) {
+  .b-sticky-con .b-sticky-con__wraper .col-1:nth-child(1) {
+    width: 100%;
+  }
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 100px;
+}
+.sticky-nav ul {
+  list-style: none;
+  padding: 8px 0;
+  border-top: 1px solid var(--main1);
+  border-bottom: 1px solid var(--main1);
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .sticky-nav ul {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 0;
+    margin-bottom: 40px;
+    scrollbar-width: thin;
+    list-style: none;
+  }
+}
+.sticky-nav ul li {
+  display: inline-block;
+  color: #5787dd;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-right: 17px;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+  .sticky-nav ul li {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding-right: 17px;
+    text-align: center;
+  }
+}
+.sticky-nav ul li.active a, .sticky-nav ul li:hover a {
+  color: var(--main);
+}
+.sticky-nav ul li:last-child {
+  padding-right: 0;
 }/*# sourceMappingURL=go-main.css.map */
