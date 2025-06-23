@@ -1939,7 +1939,7 @@ textarea:focus-visible {
   }
 }
 .sticky-nav ul li {
-  display: inline-block;
+  display: block;
   color: #5787dd;
   font-size: 16px;
   line-height: 26px;
@@ -1950,13 +1950,14 @@ textarea:focus-visible {
 }
 @media only screen and (max-width: 768px) {
   .sticky-nav ul li {
+    display: inline-block;
     flex: 0 0 auto;
     white-space: nowrap;
     padding-right: 17px;
     text-align: center;
   }
 }
-.sticky-nav ul li.active a, .sticky-nav ul li:hover a {
+.sticky-nav ul li.current-menu-item a, .sticky-nav ul li:hover a {
   color: var(--main);
 }
 .sticky-nav ul li:last-child {
