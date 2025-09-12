@@ -847,7 +847,7 @@ body.archive .entry-header h1 {
   gap: 15px;
   padding: 20px 20px 20px 80px;
   transition: all 0.3s ease;
-  width: 40%;
+  width: 23%;
 }
 @media only screen and (max-width: 1200px) {
   .navbar__partners {
@@ -861,9 +861,12 @@ body.archive .entry-header h1 {
   position: relative;
   z-index: 12;
 }
-.navbar__partners .navbar__partner svg {
+.navbar__partners .navbar__partner svg,
+.navbar__partners .navbar__partner img {
+  min-width: 120px;
   width: 100%;
   height: auto;
+  transition: all 0.3s ease;
 }
 .navbar__partners .navbar__partners__ornament {
   position: absolute;
@@ -990,7 +993,7 @@ body.archive .entry-header h1 {
 }
 #header.fixed .navbar__partners {
   padding: 10px 20px 10px 50px;
-  width: 30%;
+  width: 15%;
 }
 @media only screen and (max-width: 1200px) {
   #header.fixed .navbar__partners {
@@ -1003,6 +1006,10 @@ body.archive .entry-header h1 {
     height: 0px;
     overflow: hidden;
   }
+}
+#header.fixed .navbar__partners .navbar__partner svg,
+#header.fixed .navbar__partners .navbar__partner img {
+  min-width: 80px;
 }
 #header.fixed .navbar__partners .navbar__partners__ornament {
   bottom: 0;

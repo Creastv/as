@@ -86,7 +86,7 @@
   }
   .navbar__partners {
     padding: 10px 20px 10px 50px;
-    width: 30%;
+    width: 15%;
     @media #{$slg} {
       display: none;
     }
@@ -95,11 +95,12 @@
       height: 0px;
       overflow: hidden;
     }
-    // .navbar__partner {
-    //   svg {
-    //     width: 100px;
-    //   }
-    // }
+    .navbar__partner {
+      svg,
+      img {
+        min-width: 80px;
+      }
+    }
 
     .navbar__partners__ornament {
       bottom: 0;
