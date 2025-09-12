@@ -1,27 +1,27 @@
 @import "../../src/css/scss/variable";
-.page-id-116 {
-  #header {
-    position: absolute;
-    width: 100%;
-    background: none;
-    @media #{$sm} {
-      position: inherit;
-      background: var(--main3);
-    }
-  }
-  #header.fixed {
-    position: fixed;
-    background: #185ab1;
-    background: linear-gradient(
-      266deg,
-      rgb(53, 76, 158) 0%,
-      rgb(24, 90, 177) 100%
-    );
-  }
-  #main {
-    margin-top: 0px !important;
-  }
-}
+// .page-id-116 {
+//   #header {
+//     position: absolute;
+//     width: 100%;
+//     background: none;
+//     @media #{$sm} {
+//       position: inherit;
+//       background: var(--main3);
+//     }
+//   }
+//   #header.fixed {
+//     position: fixed;
+//     background: #185ab1;
+//     background: linear-gradient(
+//       266deg,
+//       rgb(53, 76, 158) 0%,
+//       rgb(24, 90, 177) 100%
+//     );
+//   }
+//   #main {
+//     margin-top: 0px !important;
+//   }
+// }
 .b-hero {
   position: relative;
   width: 100vw;
