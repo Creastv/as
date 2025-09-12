@@ -1436,6 +1436,7 @@ body.archive .entry-header h1 {
   justify-content: center;
   gap: 50px;
   padding: 50px 0 20px;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 998px) {
   .info-partners__logos {
