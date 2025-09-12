@@ -278,6 +278,7 @@ body {
 #go-to-top {
   cursor: pointer;
   position: fixed;
+  z-index: 9999999999 !important;
   text-align: center;
   z-index: 22;
   right: 20px;
@@ -287,10 +288,11 @@ body {
   border-radius: 100%;
   transform: translate(0, 100px);
   transition: all 0.2s linear;
-  border: 2px solid var(--light-black);
+  border: 2px solid var(--main);
+  background-color: var(--white);
 }
 #go-to-top path {
-  fill: var(--light-black) !important;
+  fill: var(--main) !important;
 }
 @media only screen and (max-width: 768px) {
   #go-to-top {

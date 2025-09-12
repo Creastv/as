@@ -16,7 +16,7 @@
   margin: 30px 0;
 }
 .bc-title .bc-title__wrap .bc-title__title {
-  color: var(--main3);
+  color: var(--main3) !important;
   font-size: 32px;
   margin-bottom: 0;
 }
@@ -36,7 +36,7 @@
   display: block;
   -webkit-clip-path: polygon(5% 83%, 100% 81%, 96% 100%, 0% 100%);
           clip-path: polygon(5% 83%, 100% 81%, 96% 100%, 0% 100%);
-  background-color: var(--main3);
+  background-color: var(--main3) !important;
   width: 110%;
   height: 100px;
   bottom: 5px;
@@ -69,4 +69,11 @@
 .bc-title.aligncenter .bc-title-big {
   left: 50%;
   transform: translate(-50%, 0) !important;
+}
+
+.bc-title--rev .bc-title__wrap .bc-title__title {
+  color: var(--white) !important;
+}
+.bc-title--rev .bc-title-big {
+  color: var(--white) !important;
 }/*# sourceMappingURL=title.css.map */

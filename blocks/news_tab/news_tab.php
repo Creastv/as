@@ -1,6 +1,7 @@
 <?php
 
 $wybierz_kategorie = get_field('wybierz_kategorie');
+$style = get_field('style');
 
 $id = 'news-tab-content-' . $block['id'];
 if (!empty($block['anchor'])) {
@@ -11,7 +12,8 @@ if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
 }
 ?>
-<div id="<?php echo esc_attr($id); ?>" class=" <?php echo esc_attr($className); ?>">
+<div id="<?php echo esc_attr($id); ?>"
+    class=" <?php echo esc_attr($className); ?> <?php echo $style == 2 ?  'news-tab-content--rev' : false; ?> ">
     <div class="news_tab__wrap">
         <?php
         if ($wybierz_kategorie):

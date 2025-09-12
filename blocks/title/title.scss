@@ -8,7 +8,7 @@
   .bc-title__wrap {
     .bc-title__title {
       // font-size: 51px !important;
-      color: var(--main3);
+      color: var(--main3) !important;
       font-size: 32px;
       margin-bottom: 0;
       @media #{$sm} {
@@ -25,7 +25,7 @@
         z-index: 0;
         display: block;
         clip-path: polygon(5% 83%, 100% 81%, 96% 100%, 0% 100%);
-        background-color: var(--main3);
+        background-color: var(--main3) !important;
         width: 110%;
         height: 100px;
         bottom: 5px;
@@ -63,5 +63,18 @@
   .bc-title-big {
     left: 50%;
     transform: translate(-50%, 0) !important;
+  }
+}
+
+.bc-title--rev {
+  .bc-title__wrap {
+    .bc-title__title {
+      // font-size: 51px !important;
+      color: var(--white) !important;
+    }
+  }
+  .bc-title-big {
+    color: var(--white) !important;
+    // opacity: 0.2;
   }
 }

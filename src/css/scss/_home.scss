@@ -1,9 +1,12 @@
 body.home {
   background-color: var(--main3);
-  * {
+  // * {
+  //   color: #fff;
+  // }
+  // .bc-title__title {
+  //   color: var(--white) !important;
+  // }
+  .desc-logos {
     color: #fff;
-  }
-  .bc-title__title {
-    color: var(--white) !important;
   }
 }

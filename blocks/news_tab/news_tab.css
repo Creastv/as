@@ -136,4 +136,18 @@
     padding-right: 17px;
     text-align: center;
   }
+}
+.news-tab-content--rev .news_tab-item img {
+  border: 2px solid var(--main3) !important;
+}
+.news-tab-content--rev .news_tab-item a {
+  color: initial !important;
+}
+.news-tab-content--rev .news_tab-item h3 {
+  color: var(--main2) !important;
+}
+.news-tab-content--rev .news_tab-item p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--light-black) !important;
 }/*# sourceMappingURL=news_tab.css.map */

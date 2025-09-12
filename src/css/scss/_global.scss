@@ -69,6 +69,7 @@ body {
 #go-to-top {
   cursor: pointer;
   position: fixed;
+  z-index: 9999999999 !important;
   text-align: center;
   z-index: 22;
   right: 20px;
@@ -79,9 +80,10 @@ body {
   transform: translate(0, 100px);
   // padding: 11px;
   transition: all 0.2s linear;
-  border: 2px solid var(--light-black);
+  border: 2px solid var(--main);
+  background-color: var(--white);
   path {
-    fill: var(--light-black) !important;
+    fill: var(--main) !important;
   }
   @media #{$sm} {
     bottom: 20px;

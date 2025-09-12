@@ -1,5 +1,6 @@
 .news-tab-content {
   margin-bottom: 30px;
+  // background-color: #fff;
 
   .news_tab__wrap {
     .title {
@@ -149,6 +150,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 768px) {
   .news_news_tab-item {
     ul.news_tab-list {
@@ -169,6 +171,25 @@
         padding-right: 17px;
         text-align: center;
       }
+    }
+  }
+}
+
+.news-tab-content--rev {
+  .news_tab-item {
+    img {
+      border: 2px solid var(--main3) !important;
+    }
+    a {
+      color: initial !important;
+    }
+    h3 {
+      color: var(--main2) !important;
+    }
+    p {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: var(--light-black) !important;
     }
   }
 }
