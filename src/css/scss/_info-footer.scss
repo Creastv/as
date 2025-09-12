@@ -1,5 +1,9 @@
 .info-partners {
-  padding: 50px 0 0;
+  padding: 50px 0 50px 0;
+  background-color: var(--white);
+  @media #{$sm} {
+    padding: 30px 0;
+  }
 }
 .info-partners__hastags {
   position: relative;

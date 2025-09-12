@@ -1,7 +1,6 @@
-<?php get_template_part('templates-parts/parts/info-footer'); ?>
 </div>
 </main>
-
+<?php get_template_part('templates-parts/parts/info-footer'); ?>
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <?php get_template_part('templates-parts/footer/footer', 'seo'); ?>
     <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
