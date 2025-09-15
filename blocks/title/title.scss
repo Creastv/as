@@ -4,6 +4,7 @@
   position: relative;
   margin: 30px 0;
   @media #{$sm} {
+    margin: 0;
   }
   .bc-title__wrap {
     .bc-title__title {
