@@ -42,6 +42,9 @@
     }
   }
 }
+.info-partners_desc--logos {
+  margin-bottom: 50px;
+}
 .info-partners__logos {
   display: flex;
   align-items: center;
@@ -55,6 +58,7 @@
   @media #{$sm} {
     flex-wrap: wrap;
     gap: 20px;
+    padding: 0;
   }
   .item {
     text-align: center;

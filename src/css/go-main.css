@@ -1432,6 +1432,10 @@ body.archive .entry-header h1 {
   }
 }
 
+.info-partners_desc--logos {
+  margin-bottom: 50px;
+}
+
 .info-partners__logos {
   display: flex;
   align-items: center;
@@ -1449,6 +1453,7 @@ body.archive .entry-header h1 {
   .info-partners__logos {
     flex-wrap: wrap;
     gap: 20px;
+    padding: 0;
   }
 }
 .info-partners__logos .item {
