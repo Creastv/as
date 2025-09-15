@@ -851,7 +851,6 @@ body.archive .entry-header h1 {
   gap: 15px;
   padding: 20px 20px 20px 80px;
   transition: all 0.3s ease;
-  width: 23%;
 }
 @media only screen and (max-width: 1200px) {
   .navbar__partners {
@@ -870,14 +869,13 @@ body.archive .entry-header h1 {
   min-width: 120px;
   width: 100%;
   height: auto;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease-in !important;
 }
 .navbar__partners .navbar__partners__ornament {
   position: absolute;
-  width: 100%;
-  height: auto;
   z-index: 0;
   bottom: 0;
+  left: -15px;
   transition: all 0.3s ease-in !important;
 }
 @media only screen and (max-width: 1200px) {

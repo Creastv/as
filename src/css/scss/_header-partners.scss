@@ -7,7 +7,7 @@
   // background-color: var(--white);
   padding: 20px 20px 20px 80px;
   transition: all 0.3s ease;
-  width: 23%;
+  // width: 23%;
   @media #{$slg} {
     background-color: #fff;
     order: 1;
@@ -22,17 +22,18 @@
       min-width: 120px;
       width: 100%;
       height: auto;
-      transition: all 0.3s ease;
+      transition: all 0.1s ease-in !important;
     }
   }
   .navbar__partners__ornament {
     position: absolute;
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    // height: auto;
     z-index: 0;
     // top: 0px;
     // bottom: -15px;
     bottom: 0;
+    left: -15px;
     transition: all 0.3s ease-in !important;
     @media #{$slg} {
       display: none;
