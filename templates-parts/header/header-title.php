@@ -120,6 +120,7 @@ $customTitle = get_field('custom_title', get_the_ID());
 			<?php the_archive_description('<div class="entry-desc">', '</div>'); ?>
 		<?php endif; ?>
 		<?php if (is_home() || is_category()): ?>
+
 			<ul class="archive-cat">
 				<?php
 				$current_cat = get_queried_object(); // pobiera aktualnie oglądaną kategorię
@@ -135,6 +136,7 @@ $customTitle = get_field('custom_title', get_the_ID());
 				?>
 
 			</ul>
+
 		<?php endif; ?>
 
 	</header>

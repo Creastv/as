@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main: #f7931d;
   --main1: #36a9e1;
@@ -449,7 +450,7 @@ body {
 }
 .sticky-socialmedia {
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   top: 50%;
   right: 20px;
   transform: translate(0, -50%);
@@ -499,6 +500,39 @@ body {
 
 .text-large {
   font-size: 125%;
+}
+
+/* stan domyślny w flow strony */
+.js-header,
+.archive-cat {
+  position: relative;
+  z-index: auto;
+}
+
+/* przypięty header */
+.js-header.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff; /* zwykle potrzebne */
+}
+
+/* przypięta belka kategorii pod headerem */
+.archive-cat.is-fixed {
+  position: fixed;
+  top: var(--header-h, 0px); /* JS ustawi zmienną */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #f9f9f9;
+}
+
+/* spacery utrzymujące wysokość w dokumencie, gdy elementy są fixed */
+#header-spacer,
+#archive-spacer {
+  height: 0;
 }
 
 body.home {
@@ -1018,6 +1052,8 @@ body.archive .entry-header h1 {
 }
 
 #footer {
+  position: relative;
+  z-index: 9999;
   margin-top: 50px;
   overflow: hidden;
   background: var(--main3);
