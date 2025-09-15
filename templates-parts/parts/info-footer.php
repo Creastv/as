@@ -15,100 +15,113 @@ $descOP = get_field('opis_pod_logotypami_-_operatorzy', 'options');
 ?>
 
 <div class="info-partners">
-    <?php if ($hastags) : ?>
-        <div class="info-partners__hastags">
-            <div class="container">
-                <?php echo $hastags; ?>
+    <div class="container">
+        <?php if ($hastags) : ?>
+            <div class="info-partners__hastags">
+                <div class="container">
+                    <?php echo $hastags; ?>
+                </div>
             </div>
-        </div>
-    <?php endif; ?>
-    <?php if ($logos) : ?>
-        <div class="info-partners__logos">
-            <?php foreach ($logos as $logo) : ?>
-                <div class="item">
-                    <?php if ($logo['link']): ?>
-                        <a href="<?php echo $logo['link']; ?>" target="_blank">
+        <?php endif; ?>
+        <?php if ($logos) : ?>
+            <div class="info-partners__logos">
+                <?php foreach ($logos as $logo) : ?>
+                    <div class="item">
+                        <?php if ($logo['link']): ?>
+                            <a href="<?php echo $logo['link']; ?>" target="_blank">
+                            <?php endif; ?>
+                            <?php if ($logo['logo']): ?>
+                                <?php echo $logo['logo']; ?>
+                            <?php endif; ?>
+                            <?php if ($logo['link']) : ?>
+                            </a>
                         <?php endif; ?>
-                        <?php if ($logo['logo']): ?>
-                            <?php echo $logo['logo']; ?>
-                        <?php endif; ?>
-                        <?php if ($logo['link']) : ?>
-                        </a>
-                    <?php endif; ?>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
-    <?php if ($desc) : ?>
-        <div class="info-partners__desc info-partners_desc--logos"><?php echo $desc; ?></div>
-    <?php endif; ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($desc) : ?>
+            <div class="info-partners__desc info-partners_desc--logos"><?php echo $desc; ?></div>
+        <?php endif; ?>
 
-    <?php if ($descPP) : ?>
-        <div class="info-partners__desc"><?php echo $descPP; ?></div>
-    <?php endif; ?>
-    <?php if ($logosPP) : ?>
-        <div class="info-partners__logos">
-            <?php foreach ($logosPP as $logo) : ?>
-                <div class="item">
-                    <?php if ($logo['link']): ?>
-                        <a href="<?php echo $logo['link']; ?>" target="_blank">
-                        <?php endif; ?>
-                        <?php if ($logo['logo']): ?>
-                            <?php echo $logo['logo']; ?>
-                        <?php endif; ?>
-                        <?php if ($logo['link']) : ?>
-                        </a>
-                    <?php endif; ?>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($logosPM) : ?>
-        <div class="info-partners__logos">
-            <?php foreach ($logosPM as $logo) : ?>
-                <div class="item">
-                    <?php if ($logo['link']): ?>
-                        <a href="<?php echo $logo['link']; ?>" target="_blank">
-                        <?php endif; ?>
-                        <?php if ($logo['logo']): ?>
-                            <?php echo $logo['logo']; ?>
-                        <?php endif; ?>
-                        <?php if ($logo['link']) : ?>
-                        </a>
-                    <?php endif; ?>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($descOP) : ?>
-        <div class="info-partners__desc"><?php echo $descOP; ?></div>
-    <?php endif; ?>
-    <?php if ($logosOP) : ?>
-        <div class="info-partners__logos info-partners__logos--op ">
-            <div class="swiper js-op">
-                <div class=" swiper-wrapper">
-                    <?php foreach ($logosOP as $index => $logo) : ?>
-                        <div class="swiper-slide">
-                            <div class="item item-<?php echo $index; ?>">
-                                <?php if ($logo['link']): ?>
-                                    <a href="<?php echo $logo['link']; ?>" target="_blank">
+        <?php if ($descPP) : ?>
+            <div class="info-partners__desc"><?php echo $descPP; ?></div>
+        <?php endif; ?>
+        <?php if ($logosPP) : ?>
+            <div class="info-partners__logos">
+                <div class="swiper js-pp">
+                    <div class=" swiper-wrapper">
+                        <?php foreach ($logosPP as $logo) : ?>
+                            <div class="swiper-slide swiper-slide-pp--<?php echo $index; ?>">
+                                <div class="item ">
+                                    <?php if ($logo['link']): ?>
+                                        <a href="<?php echo $logo['link']; ?>" target="_blank">
+                                        <?php endif; ?>
+                                        <?php if ($logo['logo']): ?>
+                                            <?php echo $logo['logo']; ?>
+                                        <?php endif; ?>
+                                        <?php if ($logo['link']) : ?>
+                                        </a>
                                     <?php endif; ?>
-                                    <?php if ($logo['logo']): ?>
-                                        <?php echo wp_get_attachment_image($logo['logo'], 'logo'); ?>
-                                    <?php endif; ?>
-                                    <?php if ($logo['link']) : ?>
-                                    </a>
-                                <?php endif; ?>
+                                </div>
                             </div>
-                        </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
-        </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
+        <?php if ($logosPM) : ?>
+            <div class="info-partners__logos">
+                <div class="swiper js-pm">
+                    <div class=" swiper-wrapper">
+                        <?php foreach ($logosPM as $logo) : ?>
+                            <div class="swiper-slide swiper-slide-pm--<?php echo $index; ?>">
+                                <div class="item">
+                                    <?php if ($logo['link']): ?>
+                                        <a href="<?php echo $logo['link']; ?>" target="_blank">
+                                        <?php endif; ?>
+                                        <?php if ($logo['logo']): ?>
+                                            <?php echo $logo['logo']; ?>
+                                        <?php endif; ?>
+                                        <?php if ($logo['link']) : ?>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($descOP) : ?>
+            <div class="info-partners__desc"><?php echo $descOP; ?></div>
+        <?php endif; ?>
+        <?php if ($logosOP) : ?>
+            <div class="info-partners__logos info-partners__logos--op ">
+                <div class="swiper js-op">
+                    <div class=" swiper-wrapper">
+                        <?php foreach ($logosOP as $index => $logo) : ?>
+                            <div class="swiper-slide">
+                                <div class="item item-<?php echo $index; ?>">
+                                    <?php if ($logo['link']): ?>
+                                        <a href="<?php echo $logo['link']; ?>" target="_blank">
+                                        <?php endif; ?>
+                                        <?php if ($logo['logo']): ?>
+                                            <?php echo wp_get_attachment_image($logo['logo'], 'logo'); ?>
+                                        <?php endif; ?>
+                                        <?php if ($logo['link']) : ?>
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
 
 
 </div>
