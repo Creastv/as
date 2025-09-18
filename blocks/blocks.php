@@ -438,6 +438,24 @@ function register_acf_block_types()
     },
   ));
   acf_register_block_type(array(
+    'name'              => 'banner-slider',
+    'title'             => __('Banner slider'),
+    'render_template'   => 'blocks/banner-slider/banner-slider.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('Baner', 'slider'),
+    'supports' => array('align' => true),
+    'enqueue_assets'    => function () {
+      wp_enqueue_script('go-banner-slider-script', get_template_directory_uri() . '/blocks/banner-slider/banner-slider.js');
+      wp_enqueue_style('go-banner-slider',  get_template_directory_uri() . '/blocks/banner-slider/banner-slider.min.css');
+    },
+  ));
+  acf_register_block_type(array(
     'name'              => 'programy',
     'title'             => __('Programy'),
     'render_template'   => 'blocks/programy/programy.php',
