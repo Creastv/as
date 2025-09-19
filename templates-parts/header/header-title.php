@@ -125,7 +125,7 @@ $customTitle = get_field('custom_title', get_the_ID());
 			$temp_menu = wp_nav_menu(array(
 				'theme_location'  => $navLocation,
 				'menu_id'           => '',
-				'menu_class'       => 'archive-cat',
+				'menu_class'       => 'archive-cat container',
 				'container'      => false,
 				'echo'           => false,
 			));

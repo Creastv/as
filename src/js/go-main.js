@@ -185,6 +185,88 @@ setTimeout(
   update(); // inicjalnie
 })();
 
+(function(){
+  const header = document.getElementById('header');
+  const menu = document.querySelector('#menu-aktualnosci-kategorie');
+  const footer = document.getElementById('footer');
+  
+  // Spacer zapobiega „skokowi” layoutu, gdy menu przechodzi na fixed
+  const spacer = document.createElement('div');
+  spacer.style.height = '0px';
+  menu.parentNode.insertBefore(spacer, menu);
+
+  let raf = null;
+
+  function headerHeight(){
+    // getBoundingClientRect() dobrze łapie wysokość nawet przy transform/animacji
+    return Math.ceil(header.getBoundingClientRect().height);
+  }
+
+  function setSpacerHeight(h){
+    spacer.style.height = h + 'px';
+  }
+
+  function update(){
+    const hH   = headerHeight();
+    const mH   = Math.ceil(menu.getBoundingClientRect().height);
+    const mTop = spacer.getBoundingClientRect().top;  // górna krawędź miejsca, gdzie menu „było”
+    const fTop = footer.getBoundingClientRect().top;
+    const winH = window.innerHeight;
+
+    // 1) Decyzja: relative -> fixed (gdy miejsce menu dojechało pod header)
+    const shouldFix = mTop <= hH;
+
+    if (shouldFix){
+      if (!menu.classList.contains('fixed')){
+        menu.classList.add('fixed');
+        setSpacerHeight(mH); // zajmij miejsce w layoucie na czas fixed
+      }
+      // dynamiczny top na podstawie aktualnej wysokości headera
+      menu.style.top = hH + 'px';
+
+      // 2) Kolizja ze stopką: dolna krawędź menu nie może zejść poniżej górnej krawędzi footera
+      // menuBottom (współrzędna viewport) = hH + mH + translateY
+      // wymagamy: menuBottom <= fTop  =>  translateY <= fTop - (hH + mH)
+      // overlap > 0 oznacza, że footer nachodzi – unosimy o overlap (ujemny translateY)
+      const overlap = (hH + mH) - fTop;
+      if (overlap > 0){
+        menu.style.transform = `translateY(${-overlap}px)`;
+      } else {
+        menu.style.transform = 'translateY(0)';
+      }
+    } else {
+      if (menu.classList.contains('fixed')){
+        menu.classList.remove('fixed');
+        menu.style.transform = 'translateY(0)';
+        menu.style.top = ''; // wróć do CSS
+        setSpacerHeight(0);  // oddaj miejsce
+      }
+    }
+  }
+
+  function schedule(){
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = null;
+      update();
+    });
+  }
+
+  // Reaguj na scroll/resize
+  window.addEventListener('scroll', schedule, { passive:true });
+  window.addEventListener('resize', schedule, { passive:true });
+
+  // Obserwuj zmiany rozmiaru headera i menu (RWD, łamanie wierszy, itp.)
+  if ('ResizeObserver' in window){
+    const ro = new ResizeObserver(schedule);
+    ro.observe(header);
+    ro.observe(menu);
+  }
+
+  // Inicjalizacja
+  update();
+})();
+
 var swiper = new Swiper(".js-pp", {
   slidesPerView: 3,
   // slidesPerView: "auto",

@@ -196,9 +196,22 @@ body {
   }
 }
 
+#menu-aktualnosci-kategorie {
+  position: relative; /* startowo relative */
+  background: #fff;
+  // padding: 20px;
+  transition: transform 0.1s linear;
+}
+#menu-aktualnosci-kategorie.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 80px; /* tyle co #header */
+  z-index: 900;
+}
 .archive-cat {
   list-style: none;
-  padding: 8px 0;
+  padding: 8px 15px;
   border-top: 1px solid var(--main1);
   border-bottom: 1px solid var(--main1);
   margin-bottom: 40px;
@@ -209,7 +222,7 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    padding: 8px 0;
+    padding: 8px 15px;
     margin-bottom: 40px;
     scrollbar-width: thin;
     list-style: none;
