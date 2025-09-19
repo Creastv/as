@@ -433,7 +433,7 @@ function register_acf_block_types()
     'keywords'          => array('Aktualności Tab'),
     'supports' => array('align' => true),
     'enqueue_assets'    => function () {
-      wp_enqueue_script('go-news-tab-script', get_template_directory_uri() . '/blocks/news_tab/news-tab.js');
+      // wp_enqueue_script('go-news-tab-script', get_template_directory_uri() . '/blocks/news_tab/news-tab.js');
       wp_enqueue_style('go-news-tab',  get_template_directory_uri() . '/blocks/news_tab/news_tab.min.css');
     },
   ));

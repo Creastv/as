@@ -189,22 +189,23 @@ setTimeout(
   const header = document.getElementById('header');
   const menu = document.querySelector('#menu-aktualnosci-kategorie');
   const footer = document.getElementById('footer');
+  if(menu) { 
+    // Spacer zapobiega „skokowi” layoutu, gdy menu przechodzi na fixed
+    const spacer = document.createElement('div');
+    spacer.style.height = '0px';
+    menu.parentNode.insertBefore(spacer, menu);
+
+    let raf = null;
+
+    function headerHeight(){
+      // getBoundingClientRect() dobrze łapie wysokość nawet przy transform/animacji
+      return Math.ceil(header.getBoundingClientRect().height);
+    }
+
+    function setSpacerHeight(h){
+      spacer.style.height = h + 'px';
+    }
   
-  // Spacer zapobiega „skokowi” layoutu, gdy menu przechodzi na fixed
-  const spacer = document.createElement('div');
-  spacer.style.height = '0px';
-  menu.parentNode.insertBefore(spacer, menu);
-
-  let raf = null;
-
-  function headerHeight(){
-    // getBoundingClientRect() dobrze łapie wysokość nawet przy transform/animacji
-    return Math.ceil(header.getBoundingClientRect().height);
-  }
-
-  function setSpacerHeight(h){
-    spacer.style.height = h + 'px';
-  }
 
   function update(){
     const hH   = headerHeight();
@@ -265,6 +266,7 @@ setTimeout(
 
   // Inicjalizacja
   update();
+}
 })();
 
 var swiper = new Swiper(".js-pp", {
@@ -292,7 +294,7 @@ var swiper = new Swiper(".js-pp", {
       // spaceBetween: 30
     },
     1024: {
-      slidesPerView: 65,
+      slidesPerView: 6,
       // spaceBetween: 50
     },
     1366: {
@@ -329,7 +331,7 @@ var swiper2 = new Swiper(".js-pm", {
       // spaceBetween: 30
     },
     1024: {
-      slidesPerView: 65,
+      slidesPerView: 5,
       // spaceBetween: 50
     },
     1366: {
