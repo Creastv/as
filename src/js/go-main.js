@@ -147,6 +147,43 @@ setTimeout(
 //   }, 100);
 // });
 
+(function(){
+  const el = document.querySelector('.sticky-socialmedia');
+  const el2 = document.querySelector('#go-to-top');
+  const footer = document.getElementById('footer');
+  const marginBottom = 0; // ten sam co w CSS: bottom: 20px
+  let ticking = false;
+
+  function update(){
+    const rectFooter = footer.getBoundingClientRect();
+    const winH = window.innerHeight;
+    const elH = el.offsetHeight;
+
+    // ile pikseli "nachodzi" footer na przestrzeń zajmowaną przez box
+    const overlap = (winH - rectFooter.top) - (elH + marginBottom);
+
+    if (overlap > 0){
+      // podnieś box o dokładnie tyle, by dotknął, ale nie najechał
+      el.style.transform = `translateY(${-overlap}px)`;
+      el2.style.transform = `translateY(${-overlap}px)`;
+    } else {
+      el.style.transform = `translateY(0)`;
+      el2.style.transform = `translateY(0)`;
+    }
+    ticking = false;
+  }
+
+  function onScroll(){
+    if (!ticking){
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', update);
+  update(); // inicjalnie
+})();
 
 var swiper = new Swiper(".js-pp", {
   slidesPerView: 3,

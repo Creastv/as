@@ -457,9 +457,8 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .sticky-socialmedia {
-    top: initial;
     transform: translate(0, 0);
-    bottom: 100px;
+    right: 15px;
   }
 }
 .sticky-socialmedia ul {
@@ -537,7 +536,6 @@ body {
 
 #footer {
   position: relative;
-  z-index: 9999;
   margin-top: 50px;
   overflow: hidden;
   background: var(--main3);

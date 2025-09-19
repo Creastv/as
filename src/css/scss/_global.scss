@@ -251,9 +251,10 @@ body {
   right: 20px;
   transform: translate(0, -50%);
   @media #{$sm} {
-    top: initial;
+    // top: initial;
     transform: translate(0, 0);
-    bottom: 100px;
+    // bottom: 100px;
+    right: 15px;
   }
   ul {
     list-style: none;
