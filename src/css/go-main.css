@@ -415,6 +415,7 @@ body {
   right: 0;
   top: 80px; /* tyle co #header */
   z-index: 900;
+  border-top: 1px solid #fff;
 }
 
 .archive-cat {
