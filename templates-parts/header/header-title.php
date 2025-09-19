@@ -120,22 +120,17 @@ $customTitle = get_field('custom_title', get_the_ID());
 			<?php the_archive_description('<div class="entry-desc">', '</div>'); ?>
 		<?php endif; ?>
 		<?php if (is_home() || is_category()): ?>
-
-			<ul class="archive-cat">
-				<?php
-				$current_cat = get_queried_object(); // pobiera aktualnie oglądaną kategorię
-
-				$categories = get_categories();
-				foreach ($categories as $category) {
-					$active_class = ($current_cat && $current_cat->term_id === $category->term_id) ? 'active' : '';
-					echo '<li class="' . esc_attr($active_class) . '">';
-					echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">';
-					echo esc_html($category->name);
-					echo '</a></li>';
-				}
-				?>
-
-			</ul>
+			<?php
+			$navLocation = 'secundary_menu';
+			$temp_menu = wp_nav_menu(array(
+				'theme_location'  => $navLocation,
+				'menu_id'           => '',
+				'menu_class'       => 'archive-cat',
+				'container'      => false,
+				'echo'           => false,
+			));
+			echo $temp_menu;
+			?>
 
 		<?php endif; ?>
 

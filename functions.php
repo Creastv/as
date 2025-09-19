@@ -24,6 +24,7 @@ if (!function_exists('go_register_nav_menu')) {
 	{
 		register_nav_menus(array(
 			'primary_menu' => __('Primary Menu', 'go'),
+			'secundary_menu' => __('Aktualności', 'go'),
 		));
 	}
 	add_action('after_setup_theme', 'go_register_nav_menu', 0);
