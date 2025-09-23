@@ -1,3 +1,16 @@
+:root {
+  --main: #f7931d;
+  --main1: #36a9e1;
+  --main2: #221b48;
+  --main3: #185ab1;
+  --black: #000000;
+  --light-black: #5e5e5e;
+  --body: #f5f5f5;
+  --gray: #e4e8f0;
+  --light: #fafafc;
+  --white: #fff;
+}
+
 .banner-swiper {
   margin-bottom: 50px;
 }
@@ -61,4 +74,19 @@
 .swiper-pagination--baner span {
   width: 16px;
   height: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-dc {
+    display: none !important;
+  }
+}
+
+.slider-mb {
+  display: none !important;
+}
+@media only screen and (max-width: 768px) {
+  .slider-mb {
+    display: block !important;
+  }
 }/*# sourceMappingURL=banner-slider.css.map */

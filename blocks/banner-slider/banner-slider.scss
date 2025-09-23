@@ -1,3 +1,4 @@
+@import "../../src/css/scss/variable";
 .banner-swiper {
   margin-bottom: 50px;
 }
@@ -54,4 +55,16 @@
 .swiper-pagination--baner span {
   width: 16px;
   height: 16px;
+}
+
+.slider-dc {
+  @media #{$sm} {
+    display: none !important;
+  }
+}
+.slider-mb {
+  display: none !important;
+  @media #{$sm} {
+    display: block !important;
+  }
 }
