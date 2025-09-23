@@ -72,6 +72,11 @@
         }
         a {
           align-self: flex-start;
+          @media #{$sm} {
+            font-size: 12px;
+            padding: 5px 15px;
+            border-radius: 6px;
+          }
         }
       }
 

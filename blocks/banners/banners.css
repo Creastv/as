@@ -82,6 +82,13 @@
 .banners-content .banners__wrap .banners__item .banners__content a {
   align-self: flex-start;
 }
+@media only screen and (max-width: 768px) {
+  .banners-content .banners__wrap .banners__item .banners__content a {
+    font-size: 12px;
+    padding: 5px 15px;
+    border-radius: 6px;
+  }
+}
 .banners-content .banners__wrap .banners__item:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.51);
   transform: translate(0, -10px);
