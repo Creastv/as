@@ -61,7 +61,7 @@ $descOP = get_field('opis_pod_logotypami_-_operatorzy', 'options');
             <div class="info-partners__desc info-partners_desc--logos"><?php echo $desc; ?></div>
         <?php endif; ?>
 
-        <?php if ($descPP) : ?>
+        <!-- <?php if ($descPP) : ?>
             <div class="info-partners__desc"><?php echo $descPP; ?></div>
         <?php endif; ?>
         <?php if ($logosPP) : ?>
@@ -110,9 +110,9 @@ $descOP = get_field('opis_pod_logotypami_-_operatorzy', 'options');
                     </div>
                 </div>
             </div>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
-        <?php if ($descOP) : ?>
+        <!-- <?php if ($descOP) : ?>
             <div class="info-partners__desc"><?php echo $descOP; ?></div>
         <?php endif; ?>
         <?php if ($logosOP) : ?>
@@ -137,7 +137,7 @@ $descOP = get_field('opis_pod_logotypami_-_operatorzy', 'options');
                     </div>
                 </div>
             </div>
-        <?php endif; ?>
+        <?php endif; ?> -->
     </div>
 
 
