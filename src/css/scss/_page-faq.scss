@@ -37,16 +37,21 @@
   position: -webkit-sticky;
   position: sticky;
   top: 100px;
+  background-color: var(--body);
+  // box-shadow: 0 0 40px
+  padding: 20px;
   @media #{$md} {
     // display: none;
   }
-
-  ul {
+  .sub-menu {
+    margin-bottom: 0px;
+  }
+  ul:not(.sub-menu) {
     list-style: none;
     padding: 8px 0;
     border-top: 1px solid var(--main1);
     border-bottom: 1px solid var(--main1);
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
     @media #{$sm} {
       display: flex !important;
       flex-wrap: nowrap !important;
@@ -76,9 +81,9 @@
         padding-right: 17px;
         text-align: center;
       }
-      &.current-menu-item,
+      &.current-menu-item > a,
       &:hover {
-        a {
+        > a {
           color: var(--main);
         }
       }

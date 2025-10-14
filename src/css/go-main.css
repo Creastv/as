@@ -2014,16 +2014,20 @@ textarea:focus-visible {
 .sticky-nav {
   position: sticky;
   top: 100px;
+  background-color: var(--body);
+  padding: 20px;
 }
-.sticky-nav ul {
+.sticky-nav .sub-menu {
+  margin-bottom: 0px;
+}
+.sticky-nav ul:not(.sub-menu) {
   list-style: none;
   padding: 8px 0;
   border-top: 1px solid var(--main1);
   border-bottom: 1px solid var(--main1);
-  margin-bottom: 40px;
 }
 @media only screen and (max-width: 768px) {
-  .sticky-nav ul {
+  .sticky-nav ul:not(.sub-menu) {
     display: flex !important;
     flex-wrap: nowrap !important;
     justify-content: flex-start !important;
@@ -2036,7 +2040,7 @@ textarea:focus-visible {
     list-style: none;
   }
 }
-.sticky-nav ul li {
+.sticky-nav ul:not(.sub-menu) li {
   display: block;
   color: #5787dd;
   font-size: 16px;
@@ -2047,7 +2051,7 @@ textarea:focus-visible {
   margin-bottom: 0;
 }
 @media only screen and (max-width: 768px) {
-  .sticky-nav ul li {
+  .sticky-nav ul:not(.sub-menu) li {
     display: inline-block;
     flex: 0 0 auto;
     white-space: nowrap;
@@ -2055,9 +2059,9 @@ textarea:focus-visible {
     text-align: center;
   }
 }
-.sticky-nav ul li.current-menu-item a, .sticky-nav ul li:hover a {
+.sticky-nav ul:not(.sub-menu) li.current-menu-item > a > a, .sticky-nav ul:not(.sub-menu) li:hover > a {
   color: var(--main);
 }
-.sticky-nav ul li:last-child {
+.sticky-nav ul:not(.sub-menu) li:last-child {
   padding-right: 0;
 }/*# sourceMappingURL=go-main.css.map */
