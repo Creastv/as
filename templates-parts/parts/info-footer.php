@@ -2,6 +2,7 @@
 
 $hastags = get_field('pasek_nad_logotypami', 'options');
 $logos = get_field('logotypy', 'options');
+$logosCD = get_field('logotypy_cd', 'options');
 $desc = get_field('opis_pod_logotypami', 'options');
 
 $logosPP = get_field('logotypy_pp', 'options');
@@ -38,6 +39,22 @@ $descOP = get_field('opis_pod_logotypami_-_operatorzy', 'options');
                         <?php endif; ?>
                     </div>
                 <?php endforeach; ?>
+                <?php if ($logosCD) : ?>
+                    <div class="cd"></div>
+                    <?php foreach ($logosCD as $logo) : ?>
+                        <div class="item">
+                            <?php if ($logo['link']): ?>
+                                <a href="<?php echo $logo['link']; ?>" target="_blank">
+                                <?php endif; ?>
+                                <?php if ($logo['logo']): ?>
+                                    <?php echo $logo['logo']; ?>
+                                <?php endif; ?>
+                                <?php if ($logo['link']) : ?>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
         <?php if ($desc) : ?>

@@ -19,15 +19,40 @@ if (!empty($block['className'])) {
         if ($wybierz_kategorie):
             echo '<div class="news_news_tab-item">';
             echo '<ul class="news_tab-list">';
+            echo '<li class="news_tab-item" data-category="wszystkie">Wszystkie</li>';
             foreach ($wybierz_kategorie as $kategoria):
                 echo '<li class="news_tab-item" data-category="' . $kategoria->term_id . '">' . $kategoria->name . '</li>';
             endforeach;
             echo '</ul>';
             echo '<div class="news_tab-content">';
+            // Wszystkie
+            $all = new WP_Query(array(
+                'post_type' => 'post',
+                'posts_per_page' => 8,
+            ));
+            echo '<div class="news_tab-pane" id="category-wszystkie">';
+            if ($all->have_posts()):
+                echo '<div class="news_tab-row">';
+                while ($all->have_posts()): $all->the_post();
+                    echo '<div class="news_tab-item">';
+                    echo '<a href="' . get_permalink() . '">';
+                    if (has_post_thumbnail()) {
+                        the_post_thumbnail('large');
+                    }
+                    echo '<p>' . get_the_date('d.m.Y') . ' - ' . get_the_date('l') . '</p>';
+                    echo '<h3>' . get_the_title() . '</h3>';
+                    echo '</a>';
+                    echo '</div>';
+                endwhile;
+                echo '</div>';
+                wp_reset_postdata();
+            endif;
+            echo '</div>';
+            // end Wszystkie
             foreach ($wybierz_kategorie as $kategoria):
                 $query = new WP_Query(array(
                     'cat' => $kategoria->term_id,
-                    'posts_per_page' => 4
+                    'posts_per_page' => 8
                 ));
                 echo '<div class="news_tab-pane" id="category-' . $kategoria->term_id . '">';
                 if ($query->have_posts()):

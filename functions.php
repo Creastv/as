@@ -150,3 +150,34 @@ function enable_webp_upload($mime_types)
 	return $mime_types;
 }
 add_filter('upload_mimes', 'enable_webp_upload');
+
+// Wyłączenie komentarzy wszędzie
+add_action('init', function() {
+    // Wyłączenie komentarzy w panelu i front-endzie
+    remove_post_type_support('post', 'comments');
+    remove_post_type_support('page', 'comments');
+    
+    // Wyłączenie trackbacków
+    remove_post_type_support('post', 'trackbacks');
+    remove_post_type_support('page', 'trackbacks');
+});
+
+// Ukrycie istniejących formularzy komentarzy
+add_filter('comments_open', '__return_false', 20, 2);
+add_filter('pings_open', '__return_false', 20, 2);
+add_filter('comments_array', '__return_empty_array', 10, 2);
+
+// Usunięcie menu komentarzy w panelu
+add_action('admin_menu', function() {
+    remove_menu_page('edit-comments.php');
+});
+
+// Przekierowanie prób wejścia na stronę komentarzy
+add_action('admin_init', function() {
+    global $pagenow;
+    if ($pagenow === 'edit-comments.php') {
+        wp_redirect(admin_url());
+        exit;
+    }
+});
+
