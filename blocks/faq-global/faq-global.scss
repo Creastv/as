@@ -67,6 +67,7 @@
         position: absolute;
         left: 0px;
         z-index: 2;
+        pointer-events: none;
         &:after {
           content: "+";
           position: absolute;
